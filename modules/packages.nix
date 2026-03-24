@@ -46,6 +46,7 @@ let
     gcc
     rustlings
     distrobox
+    nodejs
   ];
 
   appsPackages = with pkgs; [
