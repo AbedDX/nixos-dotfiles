@@ -202,23 +202,21 @@ binds {
     Mod+Shift+M { spawn-sh "noctalia-shell ipc call plugin togglePanel mediaMini"; }
 
     // Volume
-    XF86AudioRaiseVolume allow-when-locked=true {
-        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
-    }
-    XF86AudioLowerVolume allow-when-locked=true {
-        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
-    }
-    XF86AudioMute allow-when-locked=true {
-        spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-    }
-    XF86AudioMicMute allow-when-locked=true {
-        spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-    }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    // Brightness keys
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set +10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set 10%-";}      
-    
+    // Brightness
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia-shell ipc call brightness decrease"; }
+
+    // WiFi
+    XF86WLAN allow-when-locked=true { spawn-sh "noctalia-shell ipc call wifi toggle"; }
+
+    // Power profile
+    XF86Display allow-when-locked=true { spawn-sh "noctalia-shell ipc call powerProfile cycle"; }
+
     // Window Management
     Mod+Q repeat=false { close-window; }
     Mod+O repeat=false {toggle-overview;}
