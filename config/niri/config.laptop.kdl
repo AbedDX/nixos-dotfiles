@@ -1,5 +1,12 @@
 // Laptop Niri Config
 input {
+  
+    keyboard {
+        xkb {
+            layout "fi"
+            variant "nodeadkeys"
+        }
+    }
 
     touchpad {
         tap
@@ -170,14 +177,14 @@ binds {
     
     Mod+T hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     Mod+Space hotkey-overlay-title="Noctalia: Launcher" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
-    Mod+D hotkey-overlay-title="Noctalia: Launcher" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
+    Mod+D hotkey-overlay-title="Noctalia: Launcher" { spawn-sh "fuzzel"; }
     Mod+S hotkey-overlay-title="Noctalia: Control Center" { spawn-sh "noctalia-shell ipc call controlCenter toggle"; }
 
     // Settings
     Mod+Comma hotkey-overlay-title="Noctalia: Settings" { spawn-sh "noctalia-shell ipc call settings toggle"; }
 
     // Lock Screen
-    Super+Alt+L hotkey-overlay-title="Noctalia: Lock" { spawn-sh "noctalia-shell ipc call lockScreen lock"; }
+    Mod+Alt+L hotkey-overlay-title="Noctalia: Lock" { spawn-sh "noctalia-shell ipc call lockScreen lock"; }
 
     // Apps
     Mod+Z { spawn-sh "flatpak run app.zen_browser.zen"; }
@@ -208,16 +215,13 @@ binds {
         spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
     }
 
-    // Brightness (env-based)
-    XF86MonBrightnessUp allow-when-locked=true {
-        spawn-sh "$BRIGHT_UP";
-    }
-    XF86MonBrightnessDown allow-when-locked=true {
-        spawn-sh "$BRIGHT_DOWN";
-    }
-
+    // Brightness keys
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set +10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set 10%-";}      
+    
     // Window Management
     Mod+Q repeat=false { close-window; }
+    Mod+O repeat=false {toggle-overview;}
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -267,9 +271,10 @@ binds {
     Shift+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
-    // Exit / power
+    // Quit
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
+    
 }
 
 cursor {
