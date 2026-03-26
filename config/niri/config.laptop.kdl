@@ -92,10 +92,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
 }
 
-workspace "1" { }
-workspace "2" { }
-workspace "3" { }
-workspace "4" { }
+workspace "1" { open-on-output "Acer Technologies X34 GS 0x209014C2"; } // set main-monitors as main startup (workaround)
+workspace "2" { open-on-output "Acer Technologies X34 GS 0x209014C2"; }
+workspace "3" { open-on-output "Acer Technologies X34 GS 0x209014C2"; }
+workspace "4" { open-on-output "Acer Technologies X34 GS 0x209014C2"; }
 
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
