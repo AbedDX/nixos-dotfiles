@@ -113,6 +113,13 @@ window-rule {
 }
 
 window-rule {
+    match app-id="discord"
+    draw-border-with-background false
+    clip-to-geometry true
+    opacity 0.95
+}
+
+window-rule {
     match app-id="feishin"
     draw-border-with-background false
     geometry-corner-radius 8
@@ -136,6 +143,7 @@ window-rule {
     match app-id="codium"
     match app-id="com.mitchellh.ghostty"
     match app-id=r#"nemo$"#
+    match app-id="steam"
     opacity 0.85
     draw-border-with-background false
 }
