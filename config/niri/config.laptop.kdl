@@ -115,7 +115,6 @@ window-rule {
 window-rule {
     match app-id="discord"
     draw-border-with-background false
-    clip-to-geometry true
     opacity 0.95
 }
 
