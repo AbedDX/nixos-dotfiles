@@ -87,5 +87,19 @@
     gamescope
     v4l-utils
   ];
+  
+  programs.git = {
+    enable = true;
+    config = {
+      user = {
+        name = "AbedDX";
+        email = "abbe_92@live.com";
+      };
+      init = {
+        defaultBranch = "main";
+      };
+    };
+  };
+
 }
 
