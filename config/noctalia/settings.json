@@ -135,14 +135,42 @@
         {
           "defaultSettings": {
             "autoHeight": true,
+            "bindOverrides": {},
             "cheatsheetData": [],
             "columnCount": 3,
+            "descriptionTextColor": "",
             "detectedCompositor": "",
             "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+            "hyprlandLuaConfigPath": "~/.config/hypr/hyprland.lua",
+            "hyprlandParserMode": "auto",
+            "keyColorAlt": "#FF6B6B",
+            "keyColorCtrl": "",
+            "keyColorDefault": "#6C757D",
+            "keyColorMouse": "#F38181",
+            "keyColorNumeric": "#A8DADC",
+            "keyColorPrint": "#95E1D3",
+            "keyColorShift": "",
+            "keyColorSuper": "",
+            "keyColorXF86": "#4ECDC4",
+            "keyLabelColor": "#FFFFFF",
+            "keyTextAlt": "",
+            "keyTextCtrl": "",
+            "keyTextDefault": "",
+            "keyTextMouse": "",
+            "keyTextNumeric": "",
+            "keyTextPrint": "",
+            "keyTextShift": "",
+            "keyTextSuper": "",
+            "keyTextXF86": "",
+            "mangoConfigPath": "~/.config/mango/config.conf",
+            "mergeSequentialBinds": true,
             "modKeyVariable": "$mod",
             "niriConfigPath": "~/.config/niri/config.kdl",
-            "windowHeight": 0,
-            "windowWidth": 1400
+            "showUndescribedBinds": true,
+            "splitLargeWorkspaceCategory": true,
+            "windowHeight": 850,
+            "windowWidth": 1400,
+            "workspaceSplitThreshold": 12
           },
           "id": "plugin:keybind-cheatsheet"
         },
@@ -157,7 +185,7 @@
           "showAlbumArt": true,
           "showArtistFirst": true,
           "showProgressRing": true,
-          "showVisualizer": false,
+          "showVisualizer": true,
           "textColor": "none",
           "useFixedWidth": false,
           "visualizerType": "linear"
@@ -213,7 +241,7 @@
         }
       ]
     },
-    "mouseWheelAction": "none",
+    "mouseWheelAction": "workspace",
     "reverseScroll": false,
     "mouseWheelWrap": true,
     "middleClickAction": "launcherPanel",
@@ -222,7 +250,12 @@
     "rightClickAction": "controlCenter",
     "rightClickFollowMouse": true,
     "rightClickCommand": "",
-    "screenOverrides": []
+    "screenOverrides": [
+      {
+        "enabled": false,
+        "name": "DVI-I-2"
+      }
+    ]
   },
   "general": {
     "avatarImage": "/home/abeddx/.dotfiles/pics/pfps/Abeddx.png",
@@ -392,7 +425,7 @@
     "terminalCommand": "alacritty -e",
     "customLaunchPrefixEnabled": false,
     "customLaunchPrefix": "",
-    "viewMode": "list",
+    "viewMode": "grid",
     "showCategories": true,
     "iconMode": "tabler",
     "showIconBackground": false,

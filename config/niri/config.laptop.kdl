@@ -290,7 +290,7 @@ cursor {
 }
 
 layer-rule {
-    match namespace="^noctalia-wallpaper-eDP-1"
+    match namespace="^noctalia-wallpaper-(eDP-1|DVI-I-1|DVI-I-2)$"
     place-within-backdrop true
 }
 
