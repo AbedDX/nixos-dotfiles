@@ -26,8 +26,10 @@
 
   # hostname
   networking.hostName = "daxcodedeck";
-  #hardware
+  # hardware
   hardware.cpu.intel.updateMicrocode = true;
+  # kernel
+  boot.kernelParams = ["mem_sleep_default=deep"];
 
 
   workstation = {
