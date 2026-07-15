@@ -18,12 +18,11 @@ in
       name = "Tokyonight-Dark";
       package = pkgs.tokyonight-gtk-theme;
     };
-
+    gtk4.theme = config.gtk.theme;
     iconTheme = {
       name = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
-
     gtk3.extraConfig = {
       "gtk-application-prefer-dark-theme" = true;
     };
@@ -46,9 +45,12 @@ in
     "niri/config.kdl".source = niriConfig;
     "niri/noctalia.kdl".source = ../config/niri/noctalia.kdl;
     "ghostty/config".source = ../config/ghostty/tokyo-night.ghostty;
+    "noctalia/settings.json".source = ../config/noctalia/settings.json;
+
   };
 
   home.pointerCursor = {
+    enable = true;
     name = "BreezeX-RosePine-Linux";
     package = pkgs.rose-pine-cursor;
     size = 24;

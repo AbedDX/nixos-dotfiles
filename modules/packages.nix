@@ -20,7 +20,7 @@ let
     ghostty
     fastfetch
     starship
-    #lazyssh
+    lazyssh
     nixfmt
     blueman
     ffmpeg

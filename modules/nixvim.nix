@@ -17,6 +17,8 @@ in
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       ripgrep
+      stylua
+      shellcheck
     ];
     environment.sessionVariables = {
       EDITOR = "nvim";
@@ -67,8 +69,13 @@ in
         nvim-autopairs.enable = true;
         bufferline.enable = true;
         lualine.enable = true;
-        mini.ai.enable = true;
-        mini.pairs.enable = true;
+        mini = {
+          enable = true;
+          modules = {
+            ai = {};
+            pairs = {};
+            };
+        };
         noice.enable = true;
         web-devicons.enable = true;
         treesitter = {
@@ -123,29 +130,21 @@ in
             };
           };
         };
+        conform-nvim = {
+          enable = true;
+          settings = {
+            formatters_by_ft = {
+              lua = [ "stylua" ];
+              sh = [ "shellcheck" ];
+              };
+            };
+          };
         treesitter-textobjects.enable = true;
         trouble = {
           enable = true;
           settings.use_diagnostic_signs = true;
         };
         which-key.enable = true;
-        lsp = {
-          enable = true;
-          servers = {
-            pyright.enable = true;
-            ts_ls.enable = true;
-            jsonls.enable = true;
-          };
-        };
-        mason = {
-          enable = true;
-          ensureInstalled = [
-            "stylua"
-            "shellcheck"
-            "shfmt"
-            "flake8"
-          ];
-        };
         telescope.enable = true;
       };
       extraPlugins = with pkgs.vimPlugins; [
@@ -153,7 +152,6 @@ in
         nui-nvim
         snacks-nvim
         ts-comments-nvim
-        typescript-nvim
       ];
       extraConfigLua = ''
         -- flash.nvim

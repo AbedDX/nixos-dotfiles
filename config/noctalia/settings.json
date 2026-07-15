@@ -15,7 +15,6 @@
     "enableExclusionZoneInset": true,
     "backgroundOpacity": 0.93,
     "useSeparateOpacity": false,
-    "floating": false,
     "marginVertical": 4,
     "marginHorizontal": 4,
     "frameThickness": 8,
@@ -30,6 +29,7 @@
       "left": [
         {
           "colorizeSystemIcon": "none",
+          "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": false,
           "icon": "rocket",
@@ -75,19 +75,9 @@
           "maxWidth": 145,
           "scrollingMode": "hover",
           "showIcon": true,
+          "showText": true,
           "textColor": "none",
           "useFixedWidth": false
-        },
-        {
-          "defaultSettings": {
-            "autoStartBreaks": false,
-            "autoStartWork": false,
-            "longBreakDuration": 15,
-            "sessionsBeforeLongBreak": 4,
-            "shortBreakDuration": 5,
-            "workDuration": 25
-          },
-          "id": "plugin:pomodoro"
         }
       ],
       "center": [
@@ -114,66 +104,6 @@
         }
       ],
       "right": [
-        {
-          "defaultSettings": {
-            "autoPaste": false,
-            "autoPasteDelay": 300,
-            "autoPasteOnRightClick": false,
-            "cardColors": {},
-            "customColors": {},
-            "enableTodoIntegration": false,
-            "fullscreenMode": false,
-            "hidePanelBackground": false,
-            "notecardsEnabled": true,
-            "panelHeight": 0,
-            "panelWidth": 1450,
-            "pincardsEnabled": true,
-            "showCloseButton": true
-          },
-          "id": "plugin:clipper"
-        },
-        {
-          "defaultSettings": {
-            "autoHeight": true,
-            "bindOverrides": {},
-            "cheatsheetData": [],
-            "columnCount": 3,
-            "descriptionTextColor": "",
-            "detectedCompositor": "",
-            "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
-            "hyprlandLuaConfigPath": "~/.config/hypr/hyprland.lua",
-            "hyprlandParserMode": "auto",
-            "keyColorAlt": "#FF6B6B",
-            "keyColorCtrl": "",
-            "keyColorDefault": "#6C757D",
-            "keyColorMouse": "#F38181",
-            "keyColorNumeric": "#A8DADC",
-            "keyColorPrint": "#95E1D3",
-            "keyColorShift": "",
-            "keyColorSuper": "",
-            "keyColorXF86": "#4ECDC4",
-            "keyLabelColor": "#FFFFFF",
-            "keyTextAlt": "",
-            "keyTextCtrl": "",
-            "keyTextDefault": "",
-            "keyTextMouse": "",
-            "keyTextNumeric": "",
-            "keyTextPrint": "",
-            "keyTextShift": "",
-            "keyTextSuper": "",
-            "keyTextXF86": "",
-            "mangoConfigPath": "~/.config/mango/config.conf",
-            "mergeSequentialBinds": true,
-            "modKeyVariable": "$mod",
-            "niriConfigPath": "~/.config/niri/config.kdl",
-            "showUndescribedBinds": true,
-            "splitLargeWorkspaceCategory": true,
-            "windowHeight": 850,
-            "windowWidth": 1400,
-            "workspaceSplitThreshold": 12
-          },
-          "id": "plugin:keybind-cheatsheet"
-        },
         {
           "compactMode": false,
           "hideMode": "hidden",
@@ -233,6 +163,7 @@
         {
           "colorizeDistroLogo": false,
           "colorizeSystemIcon": "none",
+          "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": false,
           "icon": "noctalia",
@@ -303,7 +234,8 @@
       "keyEscape": ["Esc"],
       "keyRemove": ["Del"]
     },
-    "reverseScroll": false
+    "reverseScroll": false,
+    "smoothScrollEnabled": true
   },
   "ui": {
     "fontDefault": "Inter",
@@ -323,6 +255,7 @@
     "name": "Turku",
     "weatherEnabled": true,
     "weatherShowEffects": true,
+    "weatherTaliaMascotAlways": false,
     "useFahrenheit": false,
     "use12hourFormat": false,
     "showWeekNumberInCalendar": true,
@@ -331,7 +264,8 @@
     "analogClockInCalendar": false,
     "firstDayOfWeek": -1,
     "hideWeatherTimezone": false,
-    "hideWeatherCityName": false
+    "hideWeatherCityName": false,
+    "autoLocate": false
   },
   "calendar": {
     "cards": [
@@ -374,6 +308,7 @@
     "showHiddenFiles": false,
     "viewMode": "single",
     "setWallpaperOnAllMonitors": false,
+    "linkLightAndDarkWallpapers": true,
     "fillMode": "crop",
     "fillColor": "#000000",
     "useSolidColor": false,
@@ -394,6 +329,7 @@
     "transitionEdgeSmoothness": 0.05,
     "panelPosition": "follow_bar",
     "hideWallpaperFilenames": false,
+    "useOriginalImages": false,
     "overviewBlur": 0.4,
     "overviewTint": 0.6,
     "useWallhaven": true,
@@ -556,8 +492,6 @@
     "indicatorOpacity": 0.6
   },
   "network": {
-    "wifiEnabled": true,
-    "airplaneModeEnabled": false,
     "bluetoothRssiPollingEnabled": false,
     "bluetoothRssiPollIntervalMs": 60000,
     "networkPanelView": "wifi",
@@ -679,6 +613,7 @@
     "volumeOverdrive": false,
     "spectrumFrameRate": 30,
     "visualizerType": "linear",
+    "spectrumMirrored": true,
     "mprisBlacklist": [],
     "preferredPlayer": "",
     "volumeFeedback": false,
@@ -703,7 +638,8 @@
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
     "generationMethod": "tonal-spot",
-    "monitorForColors": ""
+    "monitorForColors": "",
+    "syncGsettings": true
   },
   "templates": {
     "activeTemplates": [],

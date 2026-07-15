@@ -29,7 +29,7 @@ input {
 output "eDP-1" {
     mode "1366x768@60.00"
     scale 1
-    position x=0 y=0
+    position x=3440 y=0
     focus-at-startup
 }
 
@@ -92,10 +92,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
 }
 
-workspace "1" { open-on-output "eDP-1"; }
-workspace "2" { open-on-output "eDP-1"; }
-workspace "3" { open-on-output "eDP-1"; }
-workspace "4" { open-on-output "eDP-1"; }
+workspace "1" { open-on-output "Acer Technologies X34 GS 0x209014C2"; }
+workspace "2" { open-on-output "Acer Technologies X34 GS 0x209014C2"; }
+workspace "3" { open-on-output "Acer Technologies X34 GS 0x209014C2"; }
+workspace "4" { open-on-output "Acer Technologies X34 GS 0x209014C2"; }
 
 
 
