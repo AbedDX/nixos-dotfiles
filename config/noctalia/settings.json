@@ -121,6 +121,31 @@
           "visualizerType": "linear"
         },
         {
+          "defaultSettings": {
+            "autoPaste": false,
+            "autoPasteDelay": 300,
+            "autoPasteOnRightClick": false,
+            "cardColors": {},
+            "customColors": {},
+            "enableTodoIntegration": false,
+            "fullscreenMode": false,
+            "hidePanelBackground": false,
+            "notecardsEnabled": true,
+            "panelHeight": 0,
+            "panelWidth": 1450,
+            "pincardsEnabled": true,
+            "showCloseButton": true
+          },
+          "id": "plugin:clipper"
+        },
+        {
+          "displayMode": "onhover",
+          "iconColor": "none",
+          "id": "KeyboardLayout",
+          "showIcon": true,
+          "textColor": "none"
+        },
+        {
           "blacklist": [],
           "chevronColor": "none",
           "colorizeIcons": false,
@@ -184,7 +209,7 @@
     "screenOverrides": [
       {
         "enabled": false,
-        "name": "DVI-I-2"
+        "name": "DVI-I-1"
       }
     ]
   },
@@ -332,8 +357,8 @@
     "useOriginalImages": false,
     "overviewBlur": 0.4,
     "overviewTint": 0.6,
-    "useWallhaven": true,
-    "wallhavenQuery": "synthwave",
+    "useWallhaven": false,
+    "wallhavenQuery": "",
     "wallhavenSorting": "relevance",
     "wallhavenOrder": "desc",
     "wallhavenCategories": "111",
@@ -469,7 +494,7 @@
     "floatingRatio": 1,
     "size": 1,
     "onlySameOutput": true,
-    "monitors": [],
+    "monitors": ["DVI-I-1", "DVI-I-2"],
     "pinnedApps": ["app.zen_browser.zen", "com.mitchellh.ghostty"],
     "colorizeIcons": false,
     "showLauncherIcon": false,
