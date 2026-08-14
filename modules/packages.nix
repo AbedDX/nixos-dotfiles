@@ -64,6 +64,7 @@ let
     gnome-calculator
     element-desktop
     discord
+    orca-slicer
   ];
 in
 {
