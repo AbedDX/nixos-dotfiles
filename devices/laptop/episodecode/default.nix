@@ -54,7 +54,6 @@
       packages = [
         "flathub:app/app.zen_browser.zen//stable"
         "flathub:app/com.github.tchx84.Flatseal//stable"
-        "flathub:app/com.usebottles.bottles//stable"
       ];
     };
   };
