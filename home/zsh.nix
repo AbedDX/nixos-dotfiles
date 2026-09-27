@@ -20,9 +20,11 @@
       yz = "yazi";
       borg_backup = "systemctl restart borgbackup-job-${hostName}-home";
       borg_logs = "journalctl -u borgbackup-job-${hostName}-home";
+      nix-shell = "NIXPKGS_ALLOW_UNFREE=1 nix-shell";
     };
     initContent = lib.mkMerge [
       (lib.mkOrder 1000 ''
+        export NIXPKGS_ALLOW_UNFREE=1
         export EZA_CONFIG_DIR="$HOME/.config/eza"
         export EZA_ICONS_AUTO=1
       '')
