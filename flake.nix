@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
 
     home-managerU = {
       url = "github:nix-community/home-manager";
@@ -33,6 +33,10 @@
 
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs-stable";
+
+    tailscale = {
+    url = "github:nixos/nixpkgs/nixos-unstable";
+  };
   };
 
   outputs =
@@ -47,6 +51,7 @@
       nixvim,
       flatpaks,
       disko,
+      tailscale,
       ...
     }@inputs:
     let

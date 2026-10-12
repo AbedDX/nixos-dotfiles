@@ -65,7 +65,10 @@ in
     ];
 
     services = {
-      tailscale.enable = true;
+      tailscale = {
+        enable = true;
+        package = inputs.tailscale.legacyPackages.${pkgs.stdenv.hostPlatform.system}.tailscale;
+      };
       qemuGuest.enable = true;
     };
 
@@ -76,6 +79,6 @@ in
       };
     };
 
-    system.stateVersion = "25.11";
+    system.stateVersion = "26.11";
   };
 }

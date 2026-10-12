@@ -122,7 +122,10 @@ in
     environment.pathsToLink = [ "/share/zsh" ];
 
     services = {
-      tailscale.enable = true;
+      tailscale = {
+        enable = true;
+        package = inputs.tailscale.legacyPackages.${pkgs.stdenv.hostPlatform.system}.tailscale;
+      };
       pcscd.enable = true; # yubikey dep
       libinput.enable = true;
       upower.enable = true;
@@ -138,6 +141,6 @@ in
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
-    system.stateVersion = "25.11";
+    system.stateVersion = "26.11";
   };
 }
