@@ -22,13 +22,13 @@ in
             4
             3
           ];
-          sort_by = "natural";
-          sort_sensitive = true;
-          sort_reverse = false;
-          sort_dir_first = true;
+          sort-by = "natural";
+          sort-sensitive = true;
+          sort-reverse = false;
+          sort-dir_first = true;
           linemode = "none";
-          show_hidden = true;
-          show_symlink = true;
+          show-hidden = true;
+          show-symlink = true;
         };
       };
     };
