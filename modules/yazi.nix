@@ -25,7 +25,7 @@ in
           sort-by = "natural";
           sort-sensitive = true;
           sort-reverse = false;
-          sort-dir_first = true;
+          sort-dir-first = true;
           linemode = "none";
           show-hidden = true;
           show-symlink = true;
