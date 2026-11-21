@@ -33,7 +33,7 @@ flake.lock   # Flake dependencies
 2. **Clone the dotfiles** into your home directory:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git ~/.dotfiles
+git clone https://github.com/AbedDX/nixos-dotfiles.git ~/.dotfile
 cd ~/.dotfiles
 ```
 
